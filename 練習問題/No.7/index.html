@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-inn wrapper">
+            <div class="logo">
+                <img src="images/logo.svg" alt="JavaScript">
+            </div>
+            <hgroup>
+                <h1>雛形</h1>
+                <h2>概要</h2>
+            </hgroup>
+        </div>
+    </header>
+    <main>
+        <div id="container" class="wrapper">
+            <section>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <small>&copy;toshiki hashizume</small>
+    </footer>
+
+    <script>
+        'use strict';
+
+        const number = Math.floor(Math.random() * 9) + 1;
+        let answer;
+        while (answer !== number) {
+
+            answer = parseInt(prompt('数当てゲーム。1~9の数字を入力してね。'));
+            console.log('number', number);
+            console.log('answer', answer);
+            let message;
+            if (answer === number) {
+                message = '当たり!';
+            } else if (answer < number) {
+                message = '残念でした。もっと大きい';
+            } else if (answer > number) {
+                message = '残念でした。もっと小さい';
+            } else {
+                message = '1~9の数字を入力してね。';
+            }
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

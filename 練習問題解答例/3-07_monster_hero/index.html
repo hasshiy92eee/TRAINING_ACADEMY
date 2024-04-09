@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inn wrapper">
+      <div class="logo">
+        <img src="images/logo.svg" alt="JavaScript">
+      </div>
+      <hgroup>
+        <h1>ひな形</h1>
+        <h2>概要</h2>
+      </hgroup>
+    </div>
+  </header>
+
+  <main>
+    <div id="container" class="wrapper">
+      <section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2024 Seiichi Nukayama</small>
+  </footer>
+  <script>
+    'use strict';
+    
+   let enemy = 100;
+   let hero = 100;
+
+    window.alert('戦闘スタート');
+    while (enemy > 0 && hero > 0) {
+      const attack = Math.floor(Math.random() * 30) + 1;
+      console.log('モンスターに' + attack + 'のダメージ!');
+      enemy = enemy - attack;
+      if (enemy > 0) {
+        const counter = Math.floor(Math.random() * 30) + 1;
+        console.log('モンスターの反撃、勇者に' + counter + 'のダメージ!');
+        hero = hero - counter;
+      }
+    }
+   if (hero > 0) {
+     console.log('モンスターを倒した! 勇者', hero);
+   } else if (enemy > 0) {
+     console.log('勇者は倒れた! モンスター', enemy);
+   } else {
+     console.log('相打ち モンスター', enemy, '勇者', hero);
+   }
+  </script> 
+</body>
+</html>
+
+<!-- 修正時刻: Fri 2024/03/01 19:37:15 -->

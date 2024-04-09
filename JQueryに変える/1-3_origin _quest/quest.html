@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダム画像変更問題</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ランダム画像変更問題</h1>
+    <div>
+        <p>下記のボタンをクリックすると、ランダムな画像に変更されます。</p>
+        <button class="btn" id="changeImageBtn">画像を変更</button>
+        <br><br>
+        <img id="mainImage" src="https://dummyimage.com/200x200/000/fff" alt="ランダムな画像">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            const images = [
+                "https://dummyimage.com/200x200/ff0000/fff",
+                "https://dummyimage.com/200x200/00ff00/fff",
+                "https://dummyimage.com/200x200/0000ff/fff"
+            ];
+            $('#changeImageBtn').on('click', function () {
+                const randomImages = Math.floor(Math.random() * images.length);
+                $('#mainImage').attr('src', images[randomImages]);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

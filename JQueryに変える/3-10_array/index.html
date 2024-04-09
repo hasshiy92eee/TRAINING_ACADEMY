@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-inn wrapper">
+            <div class="logo">
+                <img src="images/logo.svg" alt="JavaScript">
+            </div>
+            <hgroup>
+                <h1>雛形</h1>
+                <h2>概要</h2>
+            </hgroup>
+        </div>
+    </header>
+    <main>
+        <div id="container" class="wrapper">
+            <section>
+                <h1>やることリスト</h1>
+                <ul id="list"></ul>
+                <div class="pic"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <small>&copy;toshiki hashizume</small>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        'use strict';
+
+        $(function () {
+            let todo = ['デザインカンプ作成', 'データベース整理', '勉強会申し込み', '牛乳買う'];
+            todo.push('歯医者にいく');
+            for (let item of todo) {
+                $('#list').append(`<li>${item}</li>`);
+
+            }
+            $('.pic').append(`<img src="images/logo.svg" alt="gohan">`);
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

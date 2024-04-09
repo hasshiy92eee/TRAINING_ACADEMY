@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像置き換え問題</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>画像置き換え問題</h1>
+    <div>
+        <p>下記のボタンをクリックして、画像を置き換えてください。</p>
+        <button class="btn" id="changeImageBtn">画像を変更</button>
+        <br><br>
+        <img id="mainImage" src="img/boy_sit.png" alt="座っている少年">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        'use strict';
+        $('#btn').on('click', function () {
+            $('#mainImage').attr('src', 'https://dummyimage.com/200x100/000/fff')
+        });
+    </script>
+</body>
+
+</html>

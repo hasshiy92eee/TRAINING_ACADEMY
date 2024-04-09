@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-inn wrapper">
+      <div class="logo">
+        <img src="images/logo.svg" alt="JavaScript">
+      </div>
+      <hgroup>
+        <h1>ひな形</h1>
+        <h2>概要</h2>
+      </hgroup>
+    </div>
+  </header>
+
+  <main>
+    <div id="container" class="wrapper">
+      <section>
+        <h2><span>知ってました？</span><br>
+          2025年大阪万博開催まで</h2>
+        <p class="timer">
+          あと<span id="day"></span>日
+          <span id="hour"></span>時間
+          <span id="min"></span>分
+          <span id="sec"></span>秒
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2024 Seiichi Nukayama</small>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    'use strict';
+
+    $(function () {
+
+      let goal = new Date(2025, 4, 3);
+
+      recalc();
+
+      function refresh() {
+        setTimeout(recalc, 1000);
+      }
+
+      function recalc() {
+        const counter = countdown(goal);
+        $('#day').text(counter.d);
+        $('#hour').text(counter.h);
+        $('#min').text(String(counter.m).padStart(2, '0'));
+        $('#sec').text(String(counter.s).padStart(2, '0'));
+        refresh();
+      }
+
+      function countdown(due) {
+        const now = new Date();
+        const rest = due.getTime() - now.getTime();
+        const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+        const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+        const min = Math.floor(rest / 1000 / 60) % 60;
+        const sec = Math.floor(rest / 1000) % 60;
+        const count = {
+          d: days,
+          h: hours,
+          m: min,
+          s: sec
+        };
+        return count;
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

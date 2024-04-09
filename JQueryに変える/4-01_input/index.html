@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-inn wrapper">
+      <div class="logo">
+        <img src="images/logo.svg" alt="JavaScript">
+      </div>
+      <hgroup>
+        <h1>ひな形</h1>
+        <h2>概要</h2>
+      </hgroup>
+    </div>
+  </header>
+
+  <main>
+    <div id="container" class="wrapper">
+      <section>
+        <form action="#" id="form" method="GET">
+          <input type="text" name="word">
+          <input type="submit" value="検索" id="wahaha">
+        </form>
+
+        <p id="output"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2024 Seiichi Nukayama</small>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    'use strict';
+    $(function () {
+      $('#form').on('submit', function (event) {
+        event.preventDefault();
+        const search = $('input[name="word"]').val();
+        //$('#form').word.val()は使えない
+        $('#output').text(search);
+      });
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

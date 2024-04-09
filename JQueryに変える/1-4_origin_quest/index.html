@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery DOM操作問題</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <h2>商品リスト</h2>
+        <ul>
+            <li>商品1: <span class="price">1000</span>円</li>
+            <li>商品2: <span class="price">2000</span>円</li>
+            <li>商品3: <span class="price">1500</span>円</li>
+        </ul>
+        <button id="totalBtn">合計金額計算</button>
+        <p id="totalPrice"></p>
+    </div>
+
+    <script>
+        'use strict';
+        $(function () {
+            $('#totalBtn').on('click', function () {
+                let totalPrice = 0;
+                $('#price').each(function () {
+
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

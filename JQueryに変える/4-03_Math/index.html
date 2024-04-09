@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inn wrapper">
+      <div class="logo">
+        <img src="images/logo.svg" alt="JavaScript">
+      </div>
+      <hgroup>
+        <h1>ひな形</h1>
+        <h2>概要</h2>
+      </hgroup>
+    </div>
+  </header>
+
+  <main>
+    <div id="container" class="wrapper">
+      <section>
+        <form action="" method="get" id="calc">
+          好きな数を入力<input type="text" name="num"><br>
+          <input type="submit" value="計算">
+        </form>
+        <p>小数第２位で切り捨てると <span id="output"></span> です。</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2024 Seiichi Nukayama</small>
+  </footer>
+  <script>
+    'use strict';
+
+    document.getElementById('calc').onsubmit = function(e) {
+      e.preventDefault();
+      const user = document.getElementById('calc').num.value;
+      document.querySelector('#output').textContent = point(user, 2);
+    }
+    
+  
+    // num --数字
+    // digit -- 小数点第何位（けた）
+    function point(num, kurai) {
+      const mover = 10 ** kurai;
+      return Math.floor(num * mover) / mover;
+    }
+  </script> 
+</body>
+</html>

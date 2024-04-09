@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQueryプログラム問題</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    $(function () {
+    <h1>偶数か奇数か当ててください！</h1>
+    <button id="generateNumber">1~100の新しい数を生成</button>
+    <script>
+        $(function () {
+            $('#generateNumber').on('click', function () {
+                var randomNumber = Math.floor(Math.random() * 100) + 1;
+                $('#randomNumber').text('生成された数: ' + randomNumber);
+                if (randomNumber % 2 === 0) {
+                    $('#result').text('結果: 偶数');
+                } else {
+                    $('#result').text('結果: 奇数');
+                }
+            });
+        });
+    </script>>
+    <p id="randomNumber"></p>
+    <p id="result"></p>
+
+
+</body>
+
+</html>

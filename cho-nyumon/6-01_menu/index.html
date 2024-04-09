@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .submenu h3 {
+            margin: 0 0 1em 0;
+            font-size: 16px;
+            cursor: pointer;
+            color: #5e78c1;
+        }
+
+        .submenu h3:hover {
+            color: #b04188;
+            text-decoration: underline;
+        }
+
+        .submenu ul {
+            margin: 0 0 1em 0;
+            list-style-type: none;
+            font-size: 14px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-inn wrapper">
+            <div class="logo">
+                <img src="images/logo.svg" alt="JavaScript">
+            </div>
+            <hgroup>
+                <h1>雛形</h1>
+                <h2>概要</h2>
+            </hgroup>
+        </div>
+    </header>
+    <main>
+        <div id="container" class="wrapper">
+            <section>
+                <div class="sidebar">
+                    <h2>サポートページ</h2>
+                    <div class="submenu">
+                        <h3>1.初めて使うとき</h3>
+                        <ul class="hidden">
+                            <li><a href="">- 概要</a></li>
+                            <li><a href="">- インストールする</a></li>
+                            <li><a href="">- アカウント登録する</a></li>
+                            <li><a href="">- アンインストールする</a></li>
+                        </ul>
+                    </div>
+                    <div class="submenu">
+                        <h3>2.基本的な使い方</h3>
+                        <ul class="hidden">
+                            <li><a href="">- 基本的な操作方法</a></li>
+                            <li><a href="">- 元の状態に復元する</a></li>
+                            <li><a href="">- 拡張機能プラグインを追加する</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- div.sidebar>h2{サポートページ}+(div.submenu>h3{1.初めて使うとき}+ul.hidden>li>a[href=""]*4>{- $})+
+                    (div.submenu>h3{2.基本的な使い方}+ul.hidden>li>a[href=""]*3>{- $}) -->
+
+                <!-- div.sidebar>h2{サポートページ}+(div.submenu>h3{1.初めて使うとき}+ul.hidden>li>a[href=""]*4>{- -->
+                $})+(div.submenu>h3{基本的な使い方}+ul.hidden>li>a[href=""]*3>{- $}
+                <div class="submenu">
+                    <h3>2.基本的な使い方</h3>
+                    <ul class="hidden">
+                        <li><a href="">- 1</a><a href="">- 2</a><a href="">- 3</a></li>
+                    </ul>
+                </div>
+
+
+
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <small>&copy;toshiki hashizume</small>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        'use strict';
+        // $(document).ready(function () { });
+        $(function () {
+            $('.submenu h3').on('click', function () {
+                $(this).next().toggleClass('hidden');
+                //$(thi)-- クリックをした要素
+                //.next()-- 次の要素（弟要素）
+                //.toggleClass(CLASS_NAME)--CLASS_NAMEをつけ外し
+                //文字列
+            }); //function()
+
+        });
+
+    </script>
+</body>
+
+</html>

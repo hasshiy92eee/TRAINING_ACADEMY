@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>練習</h1>
+  <form action="" method="GET" id="aiu">
+    <input type="text" name="name" id="kake">
+    <input type="submit" value="送信">
+  </form>
+  <p id="output"></p>
+  <script>
+    'use strict';
+
+    document.getElementById('aiu').onsubmit = function(e) {
+      e.preventDefault();
+      let name = document.getElementById('aiu').name.value;
+      document.getElementById('output').textContent = name;
+    }
+  </script>
+</body>
+</html>

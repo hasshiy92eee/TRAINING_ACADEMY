@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>
+    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-inn wrapper">
+            <div class="logo">
+                <img src="images/logo.svg" alt="JavaScript">
+            </div>
+            <hgroup>
+                <h1>雛形</h1>
+                <h2>概要</h2>
+            </hgroup>
+        </div>
+    </header>
+    <main>
+        <div id="container" class="wrapper">
+            <section>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <small>&copy;toshiki hashizume</small>
+    </footer>
+    <script>
+        'use strict';
+        const now = new Date(2024, 2, 1, 20);
+        const hour = now.getHours();
+
+        if (hour >= 19 && hour < 21) {
+            alert('お弁当30%OFF');
+            // バーティカルバー
+        } else if (hour === 9 || hour === 15) {
+            window.alert('お弁当1個買ったら1個おまけ!');
+        } else {
+            window.alert('お弁当はいかがですか');
+        }
+
+
+        // !a-- a !== true / a === false
+
+        // if (!a) {
+
+        // }
+
+    </script>
+</body>
+
+</html>

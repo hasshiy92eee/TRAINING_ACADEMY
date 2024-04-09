@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>JavaScript課題</title>
+    <style>
+     body, h1 {
+       margin: 0;
+     }
+     a {
+       color: #000;
+       text-decoration: none;
+     }
+     a:hover {
+       color: #000;
+       font-weight: bold;
+       text-decoration: underline;
+       text-shadow: 0px 1px 3px #fff;
+     }
+     header {
+       background-color: lightblue;
+       padding: 10px 0;
+       margin-bottom: 20px;
+     }
+     header h1 {
+       font-size: 1.2rem;
+       flex: 1 1 auto;
+     }
+     header .container {
+       display: flex;
+     }
+     header .zoo {
+       flex: 0 0 auto;
+     }
+     .wrapper {
+       width: 600px;
+       margin: 0 auto;
+     }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper container">
+        <h1>JavaScript課題</h1>
+        <div class="zoo"><a href="zoo.html">動物園</a> </div>
+      </div>
+    </header>
+    <section class="wrapper">
+      <p>動画のように、ハンバーバーメニューとモーダルウィンドウをつけてください。</p>
+      <ul>
+        <li>ハンバーガーメニューは js/zoo.js に記述してください。</li>
+        <li>モーダルウィンドウは js/modal.js に記述してください。</li>
+      </ul>
+      <video controls>
+        <source src="setsumei.webm" type="video/webm"/>
+      </video>
+    </section>
+  </body>
+</html>
+
+<!-- 修正時刻: Mon 2024/02/12 09:20:15 -->
